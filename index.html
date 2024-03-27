@@ -1,68 +1,573 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="uk">
+  <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritual Services</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Ritual Services</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <title lang="uk">Ритуальна служба"ХАРОН"</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+  
+    <!--Top Line-->
+  <header class="header">
+    <div class="conteiner topline">
+       <a href="index.html" class="logo">
+          <div class="logo-container">
+              <svg class="web" >
+                  <use href="./defs/symbol-defs3.svg#icon-crosslogo">
+                  </use>
+              </svg>
+            <span class="company-name">XAPOH</span>
+          </div>  
+      </a>
+      <nav class="header-nav">
+       <ul class="header-list">
+          <li class="header-item"><a href="./index.html" class="link current"></a>Харон</li>
+          <li class="header-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
+          <li class="header-item"><a href="./contacts.html" class="link">Контакти</a></li>
+        </ul>
+       </nav>
+  <!-- Burger button for Smartphone-->
+     <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+       <svg class="menu-button_icon" width="32" height="22">
+        <use class="icon-menu" href="./imajes/sprite.svg#icon-charm_menu-hamburger"></use>
+        <!--<use  class="icon-cross" href="./icons/icons.svg.svg#icon-close-icon-1"></use>
+         -->
+       </svg>
+     </button>
+       <ul class="connection-list">
+        <li class="connection-item">
+          <a href="mailto:info@devstudio.com" class="link">info@devcharon.com</a></li>
+        <li class="connection-item">
+          <a href="tel:+380639581910" class="link">+38 (063) 958-19-10 </a>
+        </li>
+      </ul>
+    </div>
+    <!--Mobile-menu-->
+    <div class="menu-conteiner js-menu-container" id="mobile-menu">
+     <div class="conteiner mobile-menu_conteiner">
+      <button class="menu-toggle js-close-menu">
+       <svg class="mobile-menu_close-icon" width="24" hight="24">
+         <use class="icon-cross" href="./icons/icons.svg.svg#icon-close-icon-1"></use>
+       </svg>
+      </button>
+    <ul class="mobile-list">
+     <li class="mobile-item"><a href="./index.html" class="link">Харон</a></li>
+     <li class="mobile-item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+     <li class="mobile-item"><a href="/" class="link-current">Контакти</a></li>
+    </ul>
+   <div class="mobile-box-connections">
+    <ul class="mobile-connection-list">
+     <li class="connection-item">
+      <a href="tel:+380639581910" class="link">+38 (063) 958-19-10</a>
+     <li class="connection-item">
+       <a href="mailto:info@devstudio.com" class="link mail">info@devcharon.com</a></li>
+     </li>
+   </ul>
+   <ul class="mobile-media-list">
+      <li class="media-item">
+         <a href="" class="media-link">
+         <svg class="media-icon" width="16" height="16">
+           <use href="./imajes/sprite.svg#icon-instagram"></use>
+           </svg>
+         </a>
+       </li>
+     <li class="media-item">
+       <a href="" class="media-link">
+           <svg class="media-icon" width="16" height="16">
+            <use href="./imajes/sprite.svg#icon-twitter"></use>
+           </svg>
+         </a>
+        </li>
+      <li class="media-item">
+       <a href="" class="media-link">
+           <svg class="media-icon" width="16" height="16">
+             <use href="./imajes/sprite.svg#icon-facebook"></use>
+           </svg>
+         </a>
+       </li>
+      <li class="media-item">
+       <a href="" class="media-link">
+           <svg class="media-icon" width="16" height="16">
+            <use href="./imajes/sprite.svg#icon-linkedin"></use>
+           </svg>
+         </a>
+       </li>
+    </ul>
+  </div>
+ </div>
+</div>
+</header>
+<main>
+<!--Section-hero-->
+
+<section class="hero">
+         <h1 class="hero-title">РИТУАЛЬНА СЛУЖБА</h1>                
+        <button data-modal-open type="button" class="button" >Замовіть Послугу</button>
+        
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+      <button data-modal-close class="close-button">
+          <svg  class="close-icon" width="8" height="8">
+           <use href="./imajes/modal.svg#icon-close-icon-1"></use>
+         </svg>
+      </button>
+     <h3 class="modal-head">Оставьте ваши контакты и мы вам позвоним</h3>
+  <form class="modal-form">
+   <label class="modal-form-field">
+      <span class="modal-form-input-descr">Имя*</span>
+        <span class="modal-form-input-wrapper">
+          <input type="text" 
+          name="user_name" 
+          class="modal-form-input" 
+          required 
+          pattern="[a-zA-Zа-яА-Я]+" 
+          minlength="2"/>
+          <svg class="modal-form-input-icon" width="18" height="18">
+            <use href="./icons/icons.svg.svg#icon-person-icon"></use>
+           </svg>
+      </span>
+    </label>
+   <label class="modal-form-field">
+     <span class="modal-form-input-descr">Телефон*</span>
+        <span class="modal-form-input-wrapper">
+          <input type="tel" 
+          name="user_phone" 
+          class="modal-form-input" 
+          required 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          title="xxx-xxx-xx-xx"/>
+          <svg class="modal-form-input-icon" width="18" height="24">
+           <use href="./icons/icons.svg.svg#icon-phone-icon"></use>
+          </svg>
+        </span>
+     </label>
+    <label class="modal-form-field">
+      <span class="modal-form-input-descr">E-mail*</span>
+        <span class="modal-form-input-wrapper">
+          <input type="email" name="user_email" class="modal-form-input" required/>
+          <svg class="modal-form-input-icon" width="18" height="24">
+            <use href="./icons/icons.svg.svg#icon-email-icon"></use>
+           </svg>
+         </span>
+      </label>
+    <label class="modal-form-field">
+        <span class="modal-form-input-descr">Коментарий</span>
+          <textarea name="user_message" 
+          class="modal-form-message"  
+          placeholder="Text input"></textarea> 
+      </label>
+        <input id="user-policy" type="checkbox" name="user_policy" 
+               class="modal-form-check visually-hidden "/>
+        <label for="user-policy"  class="modal-form-check-descr">
+               I accept the terms and conditions of the&nbsp;
+            <a class=" privacy-policy" href="">Privacy Policy</a>
+        </label> 
+      <button class="modal-form-button" type="submit">Отправить</button> 
+    </form>
+   </div>
+</div>
+  </section>
     
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Welcome to Ritual Services. We provide...</p>
-        </div>
-    </section>
-    
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service">
-                <h3>Service Title</h3>
-                <p>Description of the service...</p>
+      <!--Section-Policy-->
+   <section class="section policy">
+      <div class="conteiner">
+        <h2 hidden class="section-title">Policy</h2>
+         <ul class="policy-list">
+          <li class="item">
+            <div class="policy-icon">
+             <svg class="icon" width="64" height="64">
+              <use href="./defs/symbol-defs.svg#icon-greek"></use>
+             </svg>
             </div>
-            <!-- Add more services as needed -->
+            <h3 class="title">Стратегия</h3>
+            <p class="title-text">
+              Наша цель — помочь Вам в решении всех проблем, 
+              чтобы облегчить ту непомерную тяжесть,
+              которая так внезапно обрушилась на вас.
+              
+            </p>
+         </li>
+          <li class="item">
+            <div class="policy-icon">
+              <svg class="icon" width="64" height="64">
+               <use href="./imajes/sprite.svg#icon-clock"></use>
+              </svg>
+             </div>
+            <h3 class="title">Пунктуальность</h3>
+            <p class="title-text">
+             Выполняем все необходимые действия в
+             соответствии с Вашими пожеланиями.
+            </p>
+          </li>
+          <li class="item">
+            <div class="policy-icon">
+              <svg class="icon" width="64" height="64">
+               <use href="./defs/symbol-defs.svg#icon-diamon"></use>
+              </svg>
+             </div>
+            <h3 class="title">Ответственность</h3>
+            <p class="title-text">
+              Понимая всю скорбность и важность взятых на себя обязательств,
+              берем всю ответственность за достойное проведение похорон.
+            </p>
+          </li>
+          <li class="item">
+            <div class="policy-icon">
+              <svg class="icon" width="64" height="64">
+               <use href="./defs/symbol-defs.svg#icon-headstone"></use>
+              </svg>
+             </div>
+            <h3 class="title">Достоинство</h3>
+            <p class="title-text">
+             Мы обладаем достойным опытом в организации
+             и оформлении похорон, чтобы облегчить душевную 
+             травму родных и близких.
+            </p>
+          </li>
+        </ul>
+      </div>
+      </section>
+      <!--Section-doing-->
+      <section class="section doing">
+        <div class="conteiner">
+        <h2 class="section-title">Наши Услуги</h2>
+        <ul class="img-list">
+          <li class="item-img">
+            <h3 class="team-title">Ритуальні послуги</h3>
+            <img
+              src="./imajes/gajets/candle-(1).jpg"
+              width="360"
+              height="300"
+              alt="Tablet"
+            >
+          </li>
+          <li class="item-img">
+            <h3 class="team-title">Помінальни обеди</h3>
+            <img
+              src="./imajes/gajets/dinner-table (1).jpg"
+              width="360"
+              height="300"
+              alt="Smartphon"
+            >
+          </li>
+          <li class="item-img">
+            <h3 class="team-title">Перевізка покійного по Україні</h3>
+            <img
+              src="./imajes/gajets/funeral-service-loading (1).jpg"
+              width="360"
+              height="300"
+              alt="Laptop"
+            >
+          </li>
+        </ul>
+      </div>
+      </section>
+      <!--Team-->
+    <section class="section team">
+      <div class="conteiner">
+        <h2 class="section-title">Наша Команда</h2>
+        <ul class="team-list">
+          <li class="team-item">
+           <img
+              srcset="./imajes/emploees/Mark Guerlo (1).jpg 2x"
+              src="./imajes/emploees/mark-guerello.jpg"
+              width="264"
+              height="260"
+              alt="Mark Guerrero-Product Designer"/>
+              </picture>
+               <h3 class="team-title">Mark Guerrero</h3>
+               <p class="title-text" >Product Designer</p>
+                <ul class="team-media-list">
+                   <li class="media-item">
+                      <a href="" class="media-link">
+                      <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  <li class="media-item">
+                    <a href="" class="media-link">
+                        <svg class="media-icon" width="16" height="16">
+                         <use href="./imajes/sprite.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                     </li>
+                   <li class="media-item">
+                    <a href="" class="media-link">
+                        <svg class="media-icon" width="16" height="16">
+                          <use href="./imajes/sprite.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                   <li class="media-item">
+                    <a href="" class="media-link">
+                        <svg class="media-icon" width="16" height="16">
+                         <use href="./imajes/sprite.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                 </ul>
+              </li>
+            
+             <li class="team-item">
+                <img
+                  srcset="/imajes/emploees/Tom Ford (1).jpg 2x"
+                  src="./imajes/emploees/tom-ford.jpg"
+                  width="264"
+                  height="260"
+                  alt="Tom Ford-Frontend Developer">
+                <h3 class="team-title" >Tom Ford</h3>
+                <p class="title-text">Frontend Developer</p>
+                <ul class="team-media-list">
+                  <li class="media-item">
+                     <a href="" class="media-link">
+                     <svg class="media-icon" width="16" height="16">
+                       <use href="./imajes/sprite.svg#icon-instagram"></use>
+                       </svg>
+                     </a>
+                   </li>
+                 <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-twitter"></use>
+                       </svg>
+                     </a>
+                    </li>
+                  <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                         <use href="./imajes/sprite.svg#icon-facebook"></use>
+                       </svg>
+                     </a>
+                   </li>
+                  <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-linkedin"></use>
+                       </svg>
+                     </a>
+                   </li>
+                </ul>
+             </li>
+
+            <li class="team-item">
+                <img
+                srcset="./imajes/emploees/Camila Garcia (1).jpg 2x"
+                  src="./imajes/emploees/camila-garcia.jpg"
+                  width="264"
+                  height="260"
+                  alt="Camila Garcia-Marketing">
+                <h3 class="team-title">Camila Garcia</h3>
+                <p class="title-text">Marketing</p>
+                <ul class="team-media-list">
+                  <li class="media-item">
+                     <a href="" class="media-link">
+                     <svg class="media-icon" width="16" height="16">
+                       <use href="./imajes/sprite.svg#icon-instagram"></use>
+                       </svg>
+                     </a>
+                   </li>
+                 <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-twitter"></use>
+                       </svg>
+                     </a>
+                    </li>
+                  <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                         <use href="./imajes/sprite.svg#icon-facebook"></use>
+                       </svg>
+                     </a>
+                   </li>
+                  <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-linkedin"></use>
+                       </svg>
+                     </a>
+                   </li>
+                </ul>
+             </li>
+
+            <li class="team-item">
+                <img
+                srcset="./imajes/emploees/Daniel Wilson (1).jpg 2x"
+                  src="./imajes/emploees/daniel-wilson.jpg"
+                  width="264"
+                  height="260"
+                  alt="Daniel Vilson-UI Designer"
+                >
+                <h3 class="team-title">Daniel Wilson</h3>
+                <p class="title-text">UI Designer</p>
+                <ul class="team-media-list">
+                  <li class="media-item">
+                     <a href="" class="media-link">
+                     <svg class="media-icon" width="16" height="16">
+                       <use href="./imajes/sprite.svg#icon-instagram"></use>
+                       </svg>
+                     </a>
+                   </li>
+                 <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-twitter"></use>
+                       </svg>
+                     </a>
+                    </li>
+                  <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                         <use href="./imajes/sprite.svg#icon-facebook"></use>
+                       </svg>
+                     </a>
+                   </li>
+                  <li class="media-item">
+                   <a href="" class="media-link">
+                       <svg class="media-icon" width="16" height="16">
+                        <use href="./imajes/sprite.svg#icon-linkedin"></use>
+                       </svg>
+                     </a>
+                   </li>
+                </ul>
+            </li>
+          </ul>
         </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
+     </section>
+      <!--Section Customers-->
+ <section class="section customers">
+  <div class="conteiner">
+   <h2 class="customers-title">Сотрудничество</h2>
+    <ul class="customers-list">
+      <li class="customers-item">
+        <a href="" class="customers-link">
+          <svg class="customers-icon" wigth="104" height="56">
+              <use href="./imajes/logo (2).svg#icon-Logo-1"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers-item">
+        <a href="" class="customers-link">
+          <svg class="customers-icon" wigth="104" height="56">
+              <use href="./imajes/sprite.svg#icon-Logo_Company"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers-item">
+        <a href="" class="customers-link">
+          <svg class="customers-icon" wigth="104" height="56">
+              <use href="./imajes/sprite (2).svg#icon-Logo3"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers-item">
+        <a href="" class="customers-link">
+          <svg class="customers-icon" wigth="104" height="56">
+              <use href="./imajes/sprite (2).svg#icon-Logo4"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers-item">
+        <a href="" class="customers-link">
+          <svg class="customers-icon" wigth="104" height="56">
+              <use href="./imajes/sprite (2).svg#icon-Logo5"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers-item">
+        <a href="" class="customers-link">
+          <svg class="customers-icon" wigth="104" height="56">
+              <use href="./imajes/sprite (2).svg#icon-Logo6"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+ </section>
+</main>
+  
+
+<!--Section-footer-->
+    <footer class="footer">
+      <div class="conteiner">
+        <div class="footer-logo">
+        <a href="index.html" class="logo">
+          <div class="logo-container">
+            <svg class="web" >
+                <use xlink:href="./defs/symbol-defs3.svg#icon-crosslogo"></use>
+            </svg>
+          <span class="company-name">XAPOH</span>
+        </div>  
+      </a>
+          <p class="footer-text">
+          Весь спектр послуг без выхідних<br>
+          по организации похорон цилодобово<br>
+          063-958-1910, 096-582-7130
+        </p>
+      </div>
+     <div class="social">
+      <h4 class="social-title">Соціальни сеті</h4>
+        <ul class="social-list">
+            <li class="social-item">
+              <a href="" class="social-link">
+              <svg class="icon" width="24" height="24">
+                <use href="./imajes/sprite.svg#icon-instagram"></use>
+                </svg>
+                </a>
+              </li>
+             <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="icon" width="24" height="24">
+                 <use href="./imajes/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+             </li>
+              <li class="social-item">
+                <a href="" class="social-link">
+                <svg class="icon" width="24" height="24">
+                  <use href="./imajes/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              </li>
+             <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="icon" width="24" height="24">
+                 <use href="./imajes/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+             </li>
+         </ul>
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Ritual Services</p>
-        </div>
-    </footer>
-</body>
+        
+        <form class="footer-form-wrapper">
+          <span class="footer-form-email-wrapper">
+          <p class="footer-form-text">Подписка</p>
+         <input type="email" name="subscribe_email" class="footer-form-email" placeholder="E-mail">
+        </span>
+          <button type="submit" class="footer-form-button">Подписка
+            <svg class="footer-form-button-icon" width="24" height="24">
+              <use href="./icons/plaine.svg#icon-Plaine"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer> 
+  <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js "></script>
+  <script
+   defer
+   src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+   integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+   crossorigin="anonymous"></script>
+ </body>
 </html>

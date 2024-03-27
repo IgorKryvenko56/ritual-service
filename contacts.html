@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles1.css">
+</head>
+<body>
+    <header>
+        <div class="conteiner topline">
+            <a href="index.html" class="logo">
+               <div class="logo-container">
+                   <svg class="web" >
+                       <use href="./defs/symbol-defs3.svg#icon-crosslogo">
+                       </use>
+                   </svg>
+                 <span class="company-name">XAPOH</span>
+               </div>  
+           </a>
+           <nav class="header-nav">
+            <ul class="header-list">
+               <li class="header-item"><a href="./index.html" class="link"></a>Харон</li>
+               <li class="header-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
+               <li class="header-item"><a href="./contacts.html" class="link current">Контакти</a></li>
+             </ul>
+            </nav>
+            <ul class="connection-list">
+                <li class="connection-item">
+                  <a href="mailto:info@devstudio.com" class="link">info@devcharon.com</a></li>
+                <li class="connection-item">
+                  <a href="tel:+380639581910" class="link">+38 (063) 958-19-10 </a>
+                </li>
+              </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h2>Зв'яжіться з нами</h2>
+            <form action="#" method="POST">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+
+        <section class="location-map">
+            <h2>Наше розташування</h2>
+            <div id="map"></div>
+        </section>
+        <div class="card-thumb">
+          <img
+            src="./imajes/map_location.png"
+            width="1198"
+            height="790"
+            alt="гроб1">
+          </div>
+        <div class="card-idea">
+          <h3 class="card-title">ул.Александрийская 13П</h3>
+          <p class="card-text">Заезд с ул. 1го Травня</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="conteiner">
+          <div class="footer-logo">
+          <a href="index.html" class="logo">
+            <div class="logo-container">
+              <svg class="web" >
+                  <use xlink:href="./defs/symbol-defs3.svg#icon-crosslogo"></use>
+              </svg>
+            <span class="company-name">XAPOH</span>
+          </div>  
+        </a>
+            <p class="footer-text">
+            Весь спектр послуг без выхідних<br>
+            по организации похорон цилодобово<br>
+            063-958-1910, 096-582-7130
+          </p>
+        </div>
+       <div class="social">
+        <h4 class="social-title">Соціальни сеті</h4>
+          <ul class="social-list">
+              <li class="social-item">
+                <a href="" class="social-link">
+                <svg class="icon" width="24" height="24">
+                  <use href="./imajes/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  </a>
+                </li>
+               <li class="social-item">
+                <a href="" class="social-link">
+                  <svg class="icon" width="24" height="24">
+                   <use href="./imajes/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+               </li>
+                <li class="social-item">
+                  <a href="" class="social-link">
+                  <svg class="icon" width="24" height="24">
+                    <use href="./imajes/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+                </li>
+               <li class="social-item">
+                <a href="" class="social-link">
+                  <svg class="icon" width="24" height="24">
+                   <use href="./imajes/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+               </li>
+           </ul>
+          </div>
+          
+          <form class="footer-form-wrapper">
+            <span class="footer-form-email-wrapper">
+            <p class="footer-form-text">Подписка</p>
+           <input type="email" name="subscribe_email" class="footer-form-email" placeholder="E-mail">
+          </span>
+            <button type="submit" class="footer-form-button">Подписка
+              <svg class="footer-form-button-icon" width="24" height="24">
+                <use href="./icons/plaine.svg#icon-Plaine"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </footer> 
+   </body>
+  </html>
+  
+
