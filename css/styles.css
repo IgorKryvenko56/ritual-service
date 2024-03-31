@@ -694,6 +694,14 @@
   /*section.doing {
     display: ;
   }*/
+  
+  .img-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 15px;
+     gap: 24px;
+  }
    /*--Section Team for Mobile--*/
    .section.team  {
     background-color: var(--cloud-color);
@@ -706,7 +714,7 @@
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 72px;
+  margin-bottom: 2px;
   color:  #2E2F42;
   }
   .team-list {
@@ -774,7 +782,7 @@
   }
     /*--Section CUSTOMERS--*/
     .section.customers {
-      padding: 120px 0;
+      padding: 1px 0;
      }
     .customers-title {
     font-size: 36px;
