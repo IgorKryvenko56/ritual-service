@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .gallery-container {
+            width: calc(25% - 20px); /* Adjust the width to fit 4 columns with margins */
+            margin: 10px;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Style the gallery images */
+        .gallery-img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style the text under each image */
+        .image-text {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="./portfolio.html" class="back-link">BACK</a> Галерея</h1>
+    <div class="gallery" id="gallery-container">
+        <!-- Gallery content will be dynamically loaded here -->
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Extract the category from the URL query parameter
+          const urlParams = new URLSearchParams(window.location.search);
+          const category = urlParams.get('category');
+      
+          // Fetch or load gallery content based on the category
+          // Example:
+          // You can fetch content from a server using AJAX or fetch API
+          // Or, you can directly embed the content into the page based on the category
+          // For demonstration purposes, let's assume you have pre-defined content for each category
+          let galleryContent = '';
+      
+          switch (category) {
+            case 'Венки':
+              galleryContent = `
+              <h2>Венки</h2>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок1.jpg" alt="Image 1">
+                    <div class="image-text">Description for Image 1</div>
+                 </div>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок2.jpg" alt="Image 2">
+                    <div class="image-text">Description for Image 2</div>
+                </div>
+                <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок3.jpg" alt="Image 3">
+                    <div class="image-text">Description for Image 3</div>
+                 </div>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок4.jpg" alt="Image 4">
+                    <div class="image-text">Description for Image 4</div>
+                </div>
+                <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок5.jpg" alt="Image 5">
+                    <div class="image-text">Description for Image 5</div>
+                 </div>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок6.jpg" alt="Image 6">
+                    <div class="image-text">Description for Image 6</div>
+                </div>
+                <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок7.jpg" alt="Image 7">
+                    <div class="image-text">Description for Image 7</div>
+                 </div>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок8.jpg" alt="Image 8">
+                    <div class="image-text">Description for Image 8</div>
+                </div>
+                <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок9.jpg" alt="Image 9">
+                    <div class="image-text">Description for Image 9</div>
+                 </div>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок10.jpg" alt="Image 10">
+                    <div class="image-text">Description for Image 10</div>
+                </div>
+                <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок11.jpg" alt="Image 11">
+                    <div class="image-text">Description for Image 11</div>
+                 </div>
+                 <div class="gallery-container">
+                    <img class="gallery-img" src="./imajes/венки/венок12.jpg" alt="Image 12">
+                    <div class="image-text">Description for Image 12</div>
+                </div>
+                `;
+             break;
+            case 'Кресты':
+              galleryContent = `
+              <h2> Кресты </h2>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/кресты/крест1.jpg" alt="Image 1">
+                        <div class="image-text">Крест деревянный</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/кресты/крест2.jpg" alt="Image 2">
+                        <div class="image-text">Кресты разные 2</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/кресты/крест3.jpg" alt="Image 3">
+                        <div class="image-text">Крест металлический</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/кресты/крест1.jpg" alt="Image 4">
+                        <div class="image-text">Крест деревянный</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    `;
+                    break;
+            case 'Костюмы':
+              galleryContent = `
+              <h2> Костюмы </h2>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/костюмы/костюм1.jpg" alt="Image 1">
+                        <div class="image-text">Костюм 1</div>
+                        <p> ЦЕНА: 1000грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/костюмы/костюм2.jpg" alt="Image 2">
+                        <div class="image-text">Костюм 2</div>
+                        <p> ЦЕНА: 1000грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/костюмы/костюм1.jpg" alt="Image 3">
+                        <div class="image-text">Костюм 3</div>
+                        <p> ЦЕНА: 1000грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/костюмы/костюм1.jpg" alt="Image 4">
+                        <div class="image-text">Костюм 4</div>
+                        <p> ЦЕНА: 1000грн</p>
+                    </div>
+                    `;
+                    break;
+            case 'Урны':
+              galleryContent = `
+              <h2> Урны </h2>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/урны/урна1.jpg" alt="Image 1">
+                        <div class="image-text">Description for Image 1</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/урны/урна2.jpg" alt="Image 2">
+                        <div class="image-text">Description for Image 2</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/урны/урна2.jpg" alt="Image 3">
+                        <div class="image-text">Description for Image 2</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/урны/урна2.jpg" alt="Image 4">
+                        <div class="image-text">Description for Image 2</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    `;
+                    break; 
+            case 'Атрибуты':
+              galleryContent = `
+              <h2> Атрибуты </h2>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/атрибуты/покрывало1.jpg" alt="Image 1">
+                        <div class="image-text">Description for Image 1</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/атрибуты/покрывало1.jpg" alt="Image 2">
+                        <div class="image-text">Description for Image 2</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/атрибуты/покрывало1.jpg" alt="Image 3">
+                        <div class="image-text">Description for Image 3</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    <div class="gallery-container">
+                        <img class="gallery-img" src="./imajes/атрибуты/покрывало1.jpg" alt="Image 4">
+                        <div class="image-text">Description for Image 4</div>
+                        <p> ЦЕНА: 900грн</p>
+                    </div>
+                    `;
+                    break;                     
+            // Add cases for other categories as needed
+            default:
+              galleryContent = '<p>Invalid category!</p>';
+          }
+      
+          // Display the gallery content on the page
+          const galleryContainer = document.getElementById('gallery-container');
+          galleryContainer.innerHTML = galleryContent;
+        });
+      </script>
+    </body>
+</html>
