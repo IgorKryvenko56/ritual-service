@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/styles1.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="conteiner topline">
             <a href="index.html" class="logo">
                <div class="logo-container">
@@ -24,13 +26,18 @@
                  <span class="company-name">ЦАРСТВО XAPOH</span>
                </div>  
            </a>
-           <nav class="header-nav">
+           <nav class="header-nav" id="main-nav">
             <ul class="header-list">
                <li class="header-item"><a href="./index.html" class="link"></a>Главная</li>
                <li class="header-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
-               <li class="header-item"><a href="./contacts.html" class="link current">Контакти</a></li>
+               <li class="header-item"><a href="./contacts.html" class="link js-contact-link current">Контакти</a></li>
              </ul>
             </nav>
+            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+              <svg class="menu-button_icon" width="32" height="22">
+               <use class="icon-menu" href="./imajes/sprite.svg#icon-charm_menu-hamburger"></use>
+              </svg>
+            </button>
             <ul class="connection-list">
                 <li class="connection-item">
                   <a href="mailto:KUSKO.olga76@gmail.com" class="link">KUSKO.olga76@gmail.com</a></li>
@@ -38,13 +45,27 @@
                   <a href="tel:+380639581910" class="link">+38 (063) 958-19-10; 096-582-7130 </a>
                 </li>
               </ul>
-        </div>
-    </header>
+             </div>
+              <!--Mobile-menu-->
+    <div class="menu-conteiner js-menu-container" id="mobile-menu">
+      <div class="conteiner mobile-menu_conteiner">
+       <button class="menu-toggle js-close-menu">
+        <svg class="mobile-menu_close-icon" width="24" hight="24">
+          <use class="icon-cross" href="./icons/icons.svg.svg#icon-close-icon-1"></use>
+        </svg>
+       </button>
+     <ul class="mobile-list">
+      <li class="mobile-item"><a href="./index.html" class="link">Главная</a></li>
+      <li class="mobile-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
+      <li class="mobile-item"><a href="./contacts.html" class="link-current">Контакти</a></li>
+     </ul>
+  </div>
+</header>
 
     <main>
         <section class="contact-form">
             <h2>Зв'яжіться з нами</h2>
-            <form action="#" method="POST">
+            <form action="./contacts.html" method="GET">
                 <label for="name">Ім'я:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -88,12 +109,12 @@
         </a>
             <p class="footer-text">
             Весь спектр послуг без выхідних<br>
-            по организации похорон цилодобово<br>
+            по організації похорон цілодобово<br>
             063-958-1910, 096-582-7130
           </p>
         </div>
        <div class="social">
-        <h4 class="social-title">Соціальни сеті</h4>
+        <h4 class="social-title">Соціальні мережі</h4>
           <ul class="social-list">
               <li class="social-item">
                 <a href="" class="social-link">
@@ -128,18 +149,32 @@
           
           <form class="footer-form-wrapper">
             <span class="footer-form-email-wrapper">
-            <p class="footer-form-text">Подписка</p>
+            <p class="footer-form-text">Підписка</p>
            <input type="email" name="subscribe_email" class="footer-form-email" placeholder="E-mail">
           </span>
-            <button type="submit" class="footer-form-button">Подписка
+            <button type="submit" class="footer-form-button">Підписатися
               <svg class="footer-form-button-icon" width="24" height="24">
                 <use href="./icons/plaine.svg#icon-Plaine"></use>
               </svg>
             </button>
           </form>
         </div>
-      </footer> 
-   </body>
-  </html>
+      </footer>
+      
+    <script src="./js/mobile-menu.js "></script>
+    <script>('DOMContentLoaded', function() {
+      const openMenuBtn = document.querySelector('.js-open-menu');
+    
+      if (openMenuBtn) {
+        openMenuBtn.addEventListener('click', function() {
+          // Код для открытия/закрытия меню
+          console.log('Меню открыто или закрыто');
+        });
+      } else {
+        console.error('Кнопка бургер-меню не найдена');
+      }
+    });
+  </script>
+ </body>
+</html>
   
-

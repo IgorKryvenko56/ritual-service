@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
   </head>
   <body>
     <!--Top Line-->
@@ -23,13 +25,19 @@
           <span class="company-name">ЦАРСТВО XAPOH</span>
         </div>     
      </a>
-      <nav class="header-nav">     
+      <nav class="header-nav" id="main-nav">     
          <ul class="header-list">
           <li class="header-item"><a href="./index.html" class="link">Главная</a></li>
           <li class="header-item"><a href="./portfolio.html" class="link current">Ритуальни послуги</a></li>
-          <li class="header-item"><a href="./contacts.html" class="link">Контакти</a></li>
+          <li class="header-item"><a href="./contacts.html" class="link js-contact-link ">Контакти</a></li>
          </ul>
       </nav>
+      <!-- Burger button for Smartphone-->
+     <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+       <svg class="menu-button_icon" width="32" height="22">
+        <use class="icon-menu" href="./imajes/sprite.svg#icon-charm_menu-hamburger"></use>
+       </svg>
+     </button>
       <ul class="connection-list">
         <li  class="connection-item">
           <a href="mailto:KUSKO.olga76@gmail.com" class="link">KUSKO.olga76@gmail.com</a></li>
@@ -37,8 +45,22 @@
           <a href="tel:+380639581910" class="link">+38 (063) 958-19-10; 096-582-7130 </a>
         </li>
       </ul>
-     </div>
-    </header>
+    </div>
+     <!--Mobile-menu-->
+     <div class="menu-conteiner js-menu-container" id="mobile-menu">
+      <div class="conteiner mobile-menu_conteiner">
+       <button class="menu-toggle js-close-menu">
+        <svg class="mobile-menu_close-icon" width="24" hight="24">
+          <use class="icon-cross" href="./icons/icons.svg.svg#icon-close-icon-1"></use>
+        </svg>
+       </button>
+     <ul class="mobile-list">
+      <li class="mobile-item"><a href="./index.html" class="link">Главная</a></li>
+      <li class="mobile-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
+      <li class="mobile-item"><a href="./contacts.html" class="link-current">Контакти</a></li>
+     </ul>
+    </div>
+  </header>
     <main>
     <!--Section-portfolio-->
     <section class="section portfolio">
@@ -282,7 +304,8 @@
       </form>
     </div>
   </footer>
-<script src="./js/modal.js"></script>
+
+<script src="./js/mobile-menu.js "></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // JavaScript code here
@@ -294,6 +317,33 @@
       window.location.href = `gallery.html?category=${encodeURIComponent(category)}`;
   }
 </script>
-</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactLink = document.querySelector('.js-contact-link');
+
+    if (contactLink) {
+      contactLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Отменяем стандартное действие ссылки
+
+        // Переходим на страницу контактов
+        window.location.href = './contacts.html'; // Правильный путь к файлу контактов
+      });
+    }
+  });
+ </script>
+ <script>('DOMContentLoaded', function() {
+  const openMenuBtn = document.querySelector('.js-open-menu');
+
+  if (openMenuBtn) {
+    openMenuBtn.addEventListener('click', function() {
+      // Код для открытия/закрытия меню
+      console.log('Меню открыто или закрыто');
+    });
+  } else {
+    console.error('Кнопка бургер-меню не найдена');
+  }
+});
+</script>
+ </body>
 </html>
   

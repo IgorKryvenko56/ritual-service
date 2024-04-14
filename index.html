@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
   </head>
   <body>
   
@@ -26,11 +28,11 @@
             <span class="company-name">Царство XAPOH</span>
           </div>  
       </a>
-      <nav class="header-nav">
+      <nav class="header-nav" id = "main-nav">
        <ul class="header-list">
-          <li class="header-item"><a href="./index.html" class="link current"></a>Главная</li>
+          <li class="header-item"><a href="./index.html" class="link current">Главная</a></li>
           <li class="header-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
-          <li class="header-item"><a href="./contacts.html" class="link">Контакти</a></li>
+          <li class="header-item"><a href="./contacts.html" class="link js-contact-link">Контакти</a></li>
         </ul>
        </nav>
   <!-- Burger button for Smartphone-->
@@ -60,7 +62,7 @@
     <ul class="mobile-list">
      <li class="mobile-item"><a href="./index.html" class="link">Главная</a></li>
      <li class="mobile-item"><a href="./portfolio.html" class="link">Ритуальни послуги</a></li>
-     <li class="mobile-item"><a href="/" class="link-current">Контакти</a></li>
+     <li class="mobile-item"><a href="./contacts.html" class="link-current">Контакти</a></li>
     </ul>
    <div class="mobile-box-connections">
     <ul class="mobile-connection-list">
@@ -489,5 +491,20 @@
    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
    crossorigin="anonymous"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactLink = document.querySelector('.js-contact-link');
+  
+      if (contactLink) {
+        contactLink.addEventListener('click', function(event) {
+          event.preventDefault(); // Отменяем стандартное действие ссылки
+  
+          // Переходим на страницу контактов
+          window.location.href = './contacts.html';
+        });
+      }
+    });
+  </script>
+   
  </body>
 </html>

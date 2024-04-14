@@ -261,13 +261,13 @@
     }
     .menu-toggle.js-open-menu {
       position: absolute;
-      margin: 0;
-      padding: 0;
+      margin: 0px;
+      padding: 10px;
       background-color: transparent;
       border:none;
       height: 22px;
       top: 25px;
-      right: 5px;
+      right: -1px;
     }
   
   
@@ -301,8 +301,11 @@
       margin-bottom: 40px;
     }
     ul {
-     list-style: none;
-    } 
+      padding: 0;
+      margin: 0;
+      list-style: none;
+   }
+   
     .mobile-box-connections {
       margin-left: 0;
       padding-left: 0;
@@ -833,12 +836,13 @@
   .customers-link:focus .customers-icon {
   fill:var(--hover-color);
   }
-  .button-portfolio{
+  .button-portfolio {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 2px;
-    }
+    justify-content:center ;
+    gap:8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
    
    /*--Mobile FOOTER--*/
    .footer {
@@ -1002,11 +1006,23 @@
   }
 
   @media screen and (max-width: 767px) {
+    .section.portfolio {
+      position: relative;
+      display: flex;
+      justify-content: center;
+}
+    }
+    .container {
+      width: 100%; /* Ширина контейнера на 100% ширины секции */
+      max-width: 960px;
+      /*width: 426px;*/
+      margin: 0 auto;
+    }
     .card-pictures {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Используйте другие значения ширины */
       grid-gap: 20px;
-      justify-content: center; /* Центрируем содержимое по горизонтали */
+      justify-items: center; /* Центрируем содержимое по горизонтали */
     }
   
     .picture-item {
@@ -1024,7 +1040,7 @@
       height: auto; /* Высота будет автоматически подстраиваться для сохранения пропорций */
     }
   }
-}
+
     
 /*--F0R TABLET--*/
   
@@ -1855,7 +1871,7 @@
       width: 100%; /* Изображение будет занимать 100% ширины блока */
       height: auto; /* Высота будет автоматически подстраиваться для сохранения пропорций */
     }
-  }
+   }
   
      
    
