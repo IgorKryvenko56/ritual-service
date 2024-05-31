@@ -2312,6 +2312,11 @@
     color: rgba(46, 47, 66, 1);
     margin-bottom: 72px;
   }
+
+  .conteiner > p {
+    text-align: left;
+  }
+  
   .customers-list {
     display: flex;
     justify-content: center;
