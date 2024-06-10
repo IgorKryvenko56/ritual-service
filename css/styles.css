@@ -6,7 +6,7 @@
     --click-color:#404BBF;
     --button-color:#9747FF;
     --cloud-color:#F4F4FD;
-    --nav-color:#2E2F42;
+    --nav-color:#4f5066;
     --card-gap: 8px;
     --team-card-gap:24px;
     --card-shadow: #green;
@@ -2042,7 +2042,7 @@
     padding: 120px 0;
     margin: 0 auto;
     max-width: 1440px;
-    background-image:linear-gradient(rgba(46,47,66,0.7),
+    background-image:linear-gradient(rgba(112, 112, 130, 0.7),
     rgba(46,47,66,07)),
      url('../imajes/sympathy-card.jpg');
      background-position: center;
@@ -2309,12 +2309,13 @@
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
-    color: rgba(46, 47, 66, 1);
+    color: rgb(213, 213, 231);
     margin-bottom: 72px;
   }
 
   .conteiner > p {
     text-align: left;
+    color: rgb(213, 213, 231);
   }
   
   .customers-list {
